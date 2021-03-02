@@ -1,0 +1,340 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+// QuIC style overrides
+::selection {
+  background-color: $brand-color-accent-01;
+  color: $brand-color-accent-03;
+}
+
+.quic-header-logo {
+    background-image: url('../images/logo_quic_horizontal_darkBg.png');
+    width: 425px;
+    height: 58px;
+}
+
+.quic-header-logo.light {
+    background-image: url('../images/logo_quic_horizontal_lightBg.png');
+}
+
+.site-header {
+  z-index: 10;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  background-color: $background-color;
+  padding: 0.5em 2em;
+  border-top: 10px solid $brand-color;
+
+  .site-title { 
+    float: none;
+    flex: 1;
+  }
+
+  .site-nav {
+    flex: 1;
+    position: relative;
+  }
+  
+  .page-link {
+    font-weight: 100;
+    color: white;
+    text-decoration-color: $link-underline-color;
+    @include relative-font-size(1.1);
+  }
+}
+
+.site-header.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-color: $brand-color-accent-03;
+  z-index: 11;
+  border-top-width: 0;
+  
+	-webkit-transition: background-color .4s;
+	-o-transition: background-color .4s;
+  transition: background-color .4s;
+  
+  .page-link.blue {
+    color: $brand-color;
+  }
+}
+
+.site-footer {
+  background-color: $brand-color;
+  padding: 1.5rem 0;
+  border-bottom: 10px solid $background-color;
+  border-top-width: 0;
+}
+
+.social-links {
+  background-color: $background-color;
+  padding-bottom: $spacing-unit;
+}
+
+ul.social-media-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.social-media-list li {
+  float: none;
+  margin: 0;
+  padding: $spacing-unit * 3;
+}
+
+.social-media-list li a {
+  border-width: 0;
+  text-align: center;
+  color: $text-color;
+}
+
+.github-icon {
+  width: 108px;
+  height: 107px;
+  background-image: url('../images/icon-github.png');
+}
+
+.github-icon:hover {
+  background-image: url('../images/icon-github-hover.png');
+}
+
+.youtube-icon {
+  width: 157px;
+  height: 110px;
+  background-image: url('../images/icon-youtube.png');
+}
+
+.youtube-icon:hover {
+  background-image: url('../images/icon-youtube-hover.png');
+}
+
+.newsletter-icon {
+  width: 115px;
+  height: 115px;
+  background-image: url('../images/icon-newsletter.png');
+}
+
+.newsletter-icon:hover {
+  background-image: url('../images/icon-newsletter-hover.png');
+}
+
+.footer-text {
+  background-color: $brand-color;
+  padding: $spacing-unit * 3 0;
+  text-align: center;
+  @include relative-font-size(1.1);
+  font-weight: 100;
+}
+
+.footer-separator {
+  height: 97px;
+  background-repeat: repeat-x;
+  background-image: url(../images/bg-footer.jpg);
+}
+
+.footer-icon {
+  text-align: center;
+  padding: $spacing-unit * 3 0;
+}
+
+.welcome-text {
+  text-transform: uppercase;
+  letter-spacing: $spacing-unit / 3;
+  padding-top: $spacing-unit * 3;
+  font-weight: lighter;
+}
+
+.site-name, .info-text h1, .section-title-container h1, .quic-project h1 {
+  font-family: $header-font-family;
+}
+
+.site-name {
+  @include relative-font-size(5.5);
+  line-height: 95%;
+  font-weight: 100;
+  color: $brand-color-accent-03;
+  padding-top: $spacing-unit / 2;
+  
+}
+
+.page-heading {
+  @include relative-font-size(3.75);
+  line-height: 95%;
+  font-weight: 100;
+}
+
+.tags {
+  padding: 1em 0 1.5em 0;
+  max-width: $spacing-unit * 18;
+  @include relative-font-size(1.1);
+  font-weight: lighter;
+  
+  .tag_img {
+    width: 63px;
+    height: 24px;
+    background-image: url(../images/rc-tag.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 13px;
+    display: block;
+    float: left;
+  }
+}
+
+.binary-background {
+  margin-top: $spacing-unit * 2;
+  background-image: url('../images/binary-bg.jpg');
+  background-repeat: repeat;
+  height: $spacing-unit * 5.5;
+}
+
+.info-container, .whatis-container {
+  background-color: $brand-color;
+  padding: 5em 0;
+}
+
+.info-container-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.info-text, .whatis-left {
+  flex: 1;
+
+  h1 {
+    line-height: 95%;
+    @include relative-font-size(2.25);
+    font-weight: 100;
+  }
+
+  p {
+    @include relative-font-size(1.2);
+    line-height: 1.5em;
+    font-weight: 100;
+  }
+}
+
+.info-img, .whatis-right {
+  flex: 1;
+  margin-left: 5em
+}
+
+.whatis-container-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+
+.whatis-left {
+  p {
+    @include relative-font-size(1.33);
+    font-weight: 400;
+  }
+}
+
+.whatis-right {
+  p {
+    font-weight: lighter;
+    line-height: 2em;
+  }
+}
+
+a.button-link {
+  background-color: $button-color;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit * 1.25;
+  padding-right: $spacing-unit * 1.25;
+  border-radius: 5px;
+  color: $text-color;
+  margin-right: $spacing-unit / 2;
+}
+
+a.button-link:hover {
+  background-color: $brand-color-accent-01;
+  text-decoration: none;
+}
+
+a.button-link-2 {
+  background-color: $brand-color-accent-01;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit * 1.25;
+  padding-right: $spacing-unit * 1.25;
+  border-radius: 5px;
+  color: $text-color;
+  margin: $spacing-unit / 2;
+}
+
+a.button-link-2:hover {
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+.projects-footer {
+  border-top: 1px solid $background-color;
+  display: flex;
+  justify-content: center;
+  background-color: $brand-color;
+}
+
+.section-title-container {
+  @include relative-font-size(3);
+  text-align: center;
+  padding: $spacing-unit * 3;
+  background-image: url('../images/pattern-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $spacing-unit * 5.25;
+
+  h1 { 
+    margin-bottom: 0;
+    font-weight: lighter;
+   }
+}
+
+.quic-project-container {
+  background-color: $brand-color-accent-03;
+  padding-top: $spacing-unit *1.5;
+  padding-bottom: $spacing-unit *1.5;
+}
+
+.quic-project-container:nth-of-type(even) {
+  background-color: darken($brand-color-accent-03, 3%);
+}
+
+
+.quic-project {
+  padding: $spacing-unit 0;
+
+  .quic-project-name {
+    font-weight: 400;
+    color: $text-color-2;
+    @include relative-font-size(2.85);
+    line-height: 90%;
+    text-transform: capitalize;
+  }
+
+  .quic-project-description {
+    padding-bottom: $spacing-unit / 2;
+    @include relative-font-size(1.125);
+    font-weight: 100;
+    color: lighten($text-color-2, 15%);
+  }
+}

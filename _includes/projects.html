@@ -1,0 +1,16 @@
+{% for repository in site.github.public_repositories %}
+
+<div class="quic-project-container">
+  <div class="wrapper quic-project">
+    <h1 class="quic-project-name">{{ repository.name }}</h1>
+
+    <p class="quic-project-description">
+      {{ repository.description }}
+    </p>
+
+    <!-- <a href="{{ repository.html_url }}" class="button-link">About</a> -->
+    <a href="{{ repository.html_url }}" class="button-link">Repo</a>
+  </div>
+</div>
+
+{% endfor %}
