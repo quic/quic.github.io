@@ -111,7 +111,7 @@ ul.social-media-list {
   margin: 0;
   padding: $spacing-unit * 3;
   @include media-query($on-palm) {
-    padding: $spacing-unit;
+    padding: $spacing-unit / 1.5;
   }
 }
 
@@ -187,7 +187,7 @@ ul.social-media-list {
   font-weight: 100;
   @include media-query($on-palm) {
     @include relative-font-size(0.83);
-  padding: $spacing-unit;
+    padding: $spacing-unit;
   }
 
 }
@@ -275,7 +275,7 @@ ul.social-media-list {
 @include media-query($on-palm) {
   .tags{
     @include relative-font-size(0.75);
-    color: lighten($background-color, 20%);
+    color: lighten($background-color, 30%);
   .tag_img { 
     width: 47px;
     height: 18px;
@@ -323,7 +323,7 @@ ul.social-media-list {
 }
 @include media-query($on-palm) {
   .info-text p {
-    @include relative-font-size(0.75);
+    @include relative-font-size(0.95);
   }
   .info-text h1 {
     @include relative-font-size(1.75);
@@ -349,11 +349,11 @@ ul.social-media-list {
 
 .whatis-left {
   p {
-    @include relative-font-size(1.33);
+    @include relative-font-size(1.2);
     font-weight: 400;
     @include media-query($on-palm) {
       @include relative-font-size(1.2);
-    line-height: 1.25em;
+    line-height: 1.1em;
     }
     }
 }
@@ -370,19 +370,19 @@ ul.social-media-list {
   }
 }
 
-a.button-link {
+a.button-link, a.button-link-2 {
   background-color: $button-color;
   padding-top: $spacing-unit / 2;
   padding-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit * 1.25;
-  padding-right: $spacing-unit * 1.25;
+  padding-left: $spacing-unit * 1.66;
+  padding-right: $spacing-unit * 1.66;
   border-radius: 5px;
   color: $text-color;
   margin-right: $spacing-unit / 2;
 
   @include media-query($on-palm) {
-    padding: $spacing-unit / 3;
-    @include relative-font-size(0.66);
+    padding: $spacing-unit/3 $spacing-unit/1.83;
+    @include relative-font-size(1);
   }
 }
 
@@ -393,19 +393,7 @@ a.button-link:hover {
 
 a.button-link-2 {
   background-color: $brand-color-accent-01;
-  padding-top: $spacing-unit / 2;
-  padding-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit * 1.25;
-  padding-right: $spacing-unit * 1.25;
-  border-radius: 5px;
-  color: $text-color;
-  margin: $spacing-unit / 2;
-
-  @include media-query($on-palm) {
-    padding: $spacing-unit / 3;
-    @include relative-font-size(0.66);
-  }
-
+  margin: $spacing-unit 0;
 }
 
 a.button-link-2:hover {

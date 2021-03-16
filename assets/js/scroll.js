@@ -30,9 +30,9 @@ $(function() {
 
 // sticky header
 var $window = $(window);
-if ($window.size > 800) {
+
   $window.on('scroll', function () {
-      if ($window.scrollTop() > 50) {
+      if ($window.scrollTop() > 50 && $window.width() > 800) {
         $(".site-header").addClass("sticky");
         $(".quic-header-logo").addClass("light");
         $(".page-link").addClass("blue");  
@@ -42,4 +42,3 @@ if ($window.size > 800) {
         $(".page-link").removeClass("blue");  
       }
   });
-}
