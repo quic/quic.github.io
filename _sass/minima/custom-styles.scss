@@ -339,6 +339,12 @@ ul.social-media-list {
   .info-img { display: none }
 }
 
+@include media-query($on-palm) {
+  .whatis-right {
+    margin-left: 2em
+  }
+}
+
 .whatis-container-inner {
   display: flex;
   flex-direction: row;
