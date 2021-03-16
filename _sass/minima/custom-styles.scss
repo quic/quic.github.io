@@ -19,7 +19,6 @@
 
 .site-header {
   z-index: 10;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -45,6 +44,23 @@
     color: white;
     text-decoration-color: $link-underline-color;
     @include relative-font-size(1.1);
+  }
+}
+
+@include media-query($on-palm) {
+  .site-title, .site-nav {
+    display: none;
+  }
+  .page-content {
+    padding: 0;
+  }
+  p.welcome-text {
+    padding-top: 0;
+  }
+  div.binary-background {
+    height: 84px;
+    margin-top: 0;
+  background-size: cover;
   }
 }
 
@@ -76,6 +92,9 @@
 .social-links {
   background-color: $background-color;
   padding-bottom: $spacing-unit;
+  @include media-query($on-palm) {
+    padding-bottom: 0;
+  }
 }
 
 ul.social-media-list {
@@ -84,12 +103,16 @@ ul.social-media-list {
   flex-wrap: nowrap;
   align-items: flex-end;
   justify-content: center;
+  background-size: cover;
 }
 
 .social-media-list li {
   float: none;
   margin: 0;
   padding: $spacing-unit * 3;
+  @include media-query($on-palm) {
+    padding: $spacing-unit;
+  }
 }
 
 .social-media-list li a {
@@ -102,31 +125,59 @@ ul.social-media-list {
   width: 108px;
   height: 107px;
   background-image: url('../images/icon-github.png');
+
+  @include media-query($on-palm) {
+    width: 49px;
+    height: 48px;
+    background-image: url('../images/icon-github-sm.png');  
+  }
 }
 
 .github-icon:hover {
   background-image: url('../images/icon-github-hover.png');
+  @include media-query($on-palm) {
+    background-image: url('../images/icon-github-hover-sm.png');
+  }
 }
 
 .youtube-icon {
   width: 157px;
   height: 110px;
   background-image: url('../images/icon-youtube.png');
+  @include media-query($on-palm) {
+    width: 71px;
+    height: 50px;
+    background-image: url('../images/icon-youtube-sm.png');
+  }  
 }
 
 .youtube-icon:hover {
   background-image: url('../images/icon-youtube-hover.png');
+  @include media-query($on-palm) {
+    background-image: url('../images/icon-youtube-hover-sm.png');
+  }
 }
 
 .newsletter-icon {
   width: 115px;
   height: 115px;
   background-image: url('../images/icon-newsletter.png');
+  @include media-query($on-palm) {
+    width: 52px;
+    height: 52px;
+    background-image: url('../images/icon-newsletter-sm.png');
+    margin-left: 12px;
+  }  
 }
 
 .newsletter-icon:hover {
   background-image: url('../images/icon-newsletter-hover.png');
+  @include media-query($on-palm) {
+    background-image: url('../images/icon-newsletter-hover-sm.png');
+  }
 }
+
+
 
 .footer-text {
   background-color: $brand-color;
@@ -134,17 +185,36 @@ ul.social-media-list {
   text-align: center;
   @include relative-font-size(1.1);
   font-weight: 100;
+  @include media-query($on-palm) {
+    @include relative-font-size(0.83);
+  padding: $spacing-unit;
+  }
+
 }
 
 .footer-separator {
   height: 97px;
   background-repeat: repeat-x;
   background-image: url(../images/bg-footer.jpg);
+  background-size: cover;
+}
+
+.footer-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .footer-icon {
-  text-align: center;
-  padding: $spacing-unit * 3 0;
+  margin: $spacing-unit*2 0;
+  width: 190px;
+  height: 240px;
+  background-image: url(../images/icon-quic-footer.png);
+  @include media-query($on-palm) {
+    background-image: url(../images/icon-quic-footer-sm.png);
+    height: 108px;
+    width: 86px;
+  }
 }
 
 .welcome-text {
@@ -164,7 +234,16 @@ ul.social-media-list {
   font-weight: 100;
   color: $brand-color-accent-03;
   padding-top: $spacing-unit / 2;
-  
+}
+
+@include media-query($on-palm) {
+  .site-name {
+    @include relative-font-size(2.33);
+  }
+  .welcome-text {
+    @include relative-font-size(0.66);
+    padding-top: $spacing-unit;
+  }
 }
 
 .page-heading {
@@ -193,6 +272,18 @@ ul.social-media-list {
   }
 }
 
+@include media-query($on-palm) {
+  .tags{
+    @include relative-font-size(0.75);
+    color: lighten($background-color, 20%);
+  .tag_img { 
+    width: 47px;
+    height: 18px;
+    background-image: url(../images/rc-tag_sm.png);
+  }
+  }
+}
+
 .binary-background {
   margin-top: $spacing-unit * 2;
   background-image: url('../images/binary-bg.jpg');
@@ -203,6 +294,9 @@ ul.social-media-list {
 .info-container, .whatis-container {
   background-color: $brand-color;
   padding: 5em 0;
+  @include media-query($on-palm) {
+    padding: 2em 0;
+  }
 }
 
 .info-container-inner {
@@ -227,10 +321,22 @@ ul.social-media-list {
     font-weight: 100;
   }
 }
+@include media-query($on-palm) {
+  .info-text p {
+    @include relative-font-size(0.75);
+  }
+  .info-text h1 {
+    @include relative-font-size(1.75);
+  }
+}
 
 .info-img, .whatis-right {
   flex: 1;
   margin-left: 5em
+}
+
+@include media-query($on-palm) {
+  .info-img { display: none }
 }
 
 .whatis-container-inner {
@@ -245,13 +351,22 @@ ul.social-media-list {
   p {
     @include relative-font-size(1.33);
     font-weight: 400;
-  }
+    @include media-query($on-palm) {
+      @include relative-font-size(1.2);
+    line-height: 1.25em;
+    }
+    }
 }
 
 .whatis-right {
   p {
     font-weight: lighter;
     line-height: 2em;
+    @include media-query($on-palm) {
+      line-height: 2.1em;
+      @include relative-font-size(0.85);
+
+    }  
   }
 }
 
@@ -264,6 +379,11 @@ a.button-link {
   border-radius: 5px;
   color: $text-color;
   margin-right: $spacing-unit / 2;
+
+  @include media-query($on-palm) {
+    padding: $spacing-unit / 3;
+    @include relative-font-size(0.66);
+  }
 }
 
 a.button-link:hover {
@@ -280,6 +400,12 @@ a.button-link-2 {
   border-radius: 5px;
   color: $text-color;
   margin: $spacing-unit / 2;
+
+  @include media-query($on-palm) {
+    padding: $spacing-unit / 3;
+    @include relative-font-size(0.66);
+  }
+
 }
 
 a.button-link-2:hover {
@@ -303,16 +429,27 @@ a.button-link-2:hover {
   background-size: cover;
   height: $spacing-unit * 5.25;
 
+  @include media-query($on-palm) {
+    height: $spacing-unit * 1.66;
+    padding: $spacing-unit;
+  }
   h1 { 
     margin-bottom: 0;
     font-weight: lighter;
-   }
+    @include media-query($on-palm) {
+      @include relative-font-size(2.33);
+    }
+  }
+
 }
 
 .quic-project-container {
   background-color: $brand-color-accent-03;
   padding-top: $spacing-unit *1.5;
   padding-bottom: $spacing-unit *1.5;
+  @include media-query($on-palm) {
+    padding: $spacing-unit $spacing-unit/3;
+  }
 }
 
 .quic-project-container:nth-of-type(even) {
@@ -322,18 +459,26 @@ a.button-link-2:hover {
 
 .quic-project {
   padding: $spacing-unit 0;
-
+  @include media-query($on-palm) {
+  padding: $spacing-unit/2;
+  }
   .quic-project-name {
     font-weight: 400;
     color: $text-color-2;
     @include relative-font-size(2.85);
     line-height: 90%;
     text-transform: capitalize;
+    @include media-query($on-palm) {
+      @include relative-font-size(2);
+    }
   }
 
   .quic-project-description {
     padding-bottom: $spacing-unit / 2;
     @include relative-font-size(1.125);
+    @include media-query($on-palm) {
+      @include relative-font-size(0.85);
+    }
     font-weight: 100;
     color: lighten($text-color-2, 15%);
   }
