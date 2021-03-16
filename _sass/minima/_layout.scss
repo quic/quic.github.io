@@ -32,7 +32,6 @@
   top: 9px;
   right: $spacing-unit / 2;
   background-color: $background-color;
-  border: 1px solid $border-color-01;
   border-radius: 5px;
   text-align: right;
 
@@ -49,7 +48,7 @@
     text-align: center;
 
     > svg path {
-      fill: $border-color-03;
+      fill: $brand-color-accent-03;
     }
   }
 
