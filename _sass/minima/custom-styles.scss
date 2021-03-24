@@ -228,7 +228,7 @@ ul.social-media-list {
   }
 }
 
-.site-name, .info-text h1, .section-title-container h1, .quic-project h1 {
+h1, h2 {
   font-family: $header-font-family;
 }
 
@@ -306,9 +306,9 @@ ul.social-media-list {
 .info-text, .whatis-left {
   flex: 1;
 
-  h1 {
+  h2 {
     line-height: 95%;
-    @include relative-font-size(2.25);
+    @include relative-font-size(3);
     font-weight: 100;
   }
 
@@ -322,7 +322,7 @@ ul.social-media-list {
   .info-text p {
     @include relative-font-size(0.95);
   }
-  .info-text h1 {
+  .info-text h2 {
     @include relative-font-size(1.75);
   }
 }
@@ -411,20 +411,20 @@ a.button-link-2:hover {
 }
 
 .section-title-container {
-  @include relative-font-size(3);
   text-align: center;
   padding: $spacing-unit * 3;
   background-image: url('../images/pattern-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: $spacing-unit * 5.25;
+  // height: $spacing-unit * 5.25;
 
   @include media-query($on-palm) {
     height: $spacing-unit * 1.66;
     padding: $spacing-unit;
   }
-  h1 { 
-    margin-bottom: 0;
+  h2 { 
+  @include relative-font-size(5);
+  margin-bottom: 0;
     font-weight: lighter;
     @include media-query($on-palm) {
       @include relative-font-size(2.33);
