@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quic.github.io/sitemap.xml

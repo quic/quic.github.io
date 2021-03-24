@@ -15,7 +15,7 @@ date:   2020-10-12 08:00:00
   <div class="info-container">
     <div class="wrapper info-container-inner" data-aos="fade-right">
       <div class="info-text">
-        <h1>Empowering Users to Innovate</h1>
+        <h2>Empowering Users to Innovate</h2>
         <p>
           Open source and community-driven software development is becoming increasingly important to the wireless
           industry. The world is becoming more and more connected,
@@ -30,13 +30,13 @@ date:   2020-10-12 08:00:00
 
 
       <div class="info-img">
-        <img src="assets/images/brain-on-a-chip.png">
+        <img src="assets/images/brain-on-a-chip.png" alt="Brain on a chip image">
       </div>
     </div>
   </div>
 
   <div class="section-title-container" id="About" >
-    <h1>What is QuIC?</h1>
+    <h2>What is QuIC?</h2>
   </div>
   <div class="whatis-container">
     <div class="wrapper whatis-container-inner">
@@ -59,7 +59,7 @@ date:   2020-10-12 08:00:00
   </div>
 
   <div class="section-title-container" id="Projects" >
-    <h1>Projects</h1>
+    <h2>Projects</h2>
   </div>
 
   {%- include projects-highlighted.html -%}
