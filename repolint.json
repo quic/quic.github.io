@@ -124,7 +124,8 @@
               "build/*",
               "jest.config.js",
               "node_modules/*",
-              "types/*"
+              "types/*",
+              "js/external"
             ]
           },
           "lineCount": 5,
