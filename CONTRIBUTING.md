@@ -3,6 +3,13 @@
 Hi there!
 We’re thrilled that you’d like to contribute to this project. Please read the following prior to forking or submitting code.
 
+### For local development
+Install/update <a href="https://jekyllrb.com/docs/">Jekyll</a>
+(and its dependencies if necessary) prior to cloning this repository.
+
+Then:
+`bundle exec jekyll serve --livereload`
+
 ## Branching Strategy
 
 In general, contributors should develop on branches based off of `main` and pull requests should be made against `main`.
@@ -24,3 +31,4 @@ Here are a few things you can do that will increase the likelihood of your pull 
 - Keep your change as focused as possible.
   If you want to make multiple independent changes, please consider submitting them as separate pull requests.
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+

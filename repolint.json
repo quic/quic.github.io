@@ -160,20 +160,6 @@
         }
       }
     },
-    "javascript-package-metadata-exists": {
-      "level": "error",
-      "where": [
-        "language=javascript"
-      ],
-      "rule": {
-        "type": "file-existence",
-        "options": {
-          "globsAny": [
-            "package.json"
-          ]
-        }
-      }
-    },
     "ruby-package-metadata-exists": {
       "level": "error",
       "where": [
