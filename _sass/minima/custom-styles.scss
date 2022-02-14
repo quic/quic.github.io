@@ -440,6 +440,7 @@ a.button-link-2:hover {
   @include media-query($on-palm) {
     padding: $spacing-unit $spacing-unit/3;
   }
+  color: lighten($text-color-2, 15%);
 }
 
 .quic-project-container:nth-of-type(even) {
@@ -470,6 +471,5 @@ a.button-link-2:hover {
       @include relative-font-size(0.85);
     }
     font-weight: 100;
-    color: lighten($text-color-2, 15%);
   }
 }
