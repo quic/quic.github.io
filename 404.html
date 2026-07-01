@@ -3,6 +3,31 @@ permalink: /404.html
 layout: default
 ---
 
+<script>
+  (function () {
+    const migratedRepos = {
+      "tps-location-sdk-native": "https://qualcomm.github.io/tps-location-sdk-native",
+      "tps-location-sdk-android": "https://qualcomm.github.io/tps-location-sdk-android",
+      "aimet-pages": "https://qualcomm.github.io/aimet-pages"
+    };
+
+    const path = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
+
+    const pathParts = path.split("/").filter(Boolean);
+    const repoName = pathParts[0];
+
+    if (repoName && Object.prototype.hasOwnProperty.call(migratedRepos, repoName)) {
+      const remainingPath = path.substring(("/" + repoName).length);
+      const targetBaseUrl = migratedRepos[repoName].replace(/\/$/, "");
+      const targetUrl = targetBaseUrl + remainingPath + search + hash;
+
+      window.location.replace(targetUrl);
+    }
+  })();
+</script>
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
