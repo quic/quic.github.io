@@ -1,51 +1,61 @@
----
-permalink: /404.html
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<script>
-  (function () {
-    const migratedRepos = {
-      "tps-location-sdk-native": "https://qualcomm.github.io/tps-location-sdk-native",
-      "tps-location-sdk-android": "https://qualcomm.github.io/tps-location-sdk-android",
-      "aimet-pages": "https://qualcomm.github.io/aimet-pages",
-      "efficient-transformers": "https://qualcomm.github.io/efficient-transformers"
-    };
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>404 - Page not found</title>
 
-    const path = window.location.pathname;
-    const search = window.location.search;
-    const hash = window.location.hash;
+  <script>
+    (function () {
+      const migratedRepos = {
+        "tps-location-sdk-native": "https://qualcomm.github.io/tps-location-sdk-native",
+        "tps-location-sdk-android": "https://qualcomm.github.io/tps-location-sdk-android",
+        "aimet-pages": "https://qualcomm.github.io/aimet-pages",
+        "efficient-transformers": "https://qualcomm.github.io/efficient-transformers"
+      };
 
-    const pathParts = path.split("/").filter(Boolean);
-    const repoName = pathParts[0];
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
 
-    if (repoName && Object.prototype.hasOwnProperty.call(migratedRepos, repoName)) {
-      const remainingPath = path.substring(("/" + repoName).length);
-      const targetBaseUrl = migratedRepos[repoName].replace(/\/$/, "");
-      const targetUrl = targetBaseUrl + remainingPath + search + hash;
+      const pathParts = path.split("/").filter(Boolean);
+      const repoName = pathParts[0];
 
-      window.location.replace(targetUrl);
+      if (repoName && Object.prototype.hasOwnProperty.call(migratedRepos, repoName)) {
+        const remainingPath = path.substring(("/" + repoName).length);
+        const targetBaseUrl = migratedRepos[repoName].replace(/\/$/, "");
+        const targetUrl = targetBaseUrl + remainingPath + search + hash;
+
+        window.location.replace(targetUrl);
+      }
+    })();
+  </script>
+
+  <style type="text/css" media="screen">
+    .container {
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+      font-family: sans-serif;
     }
-  })();
-</script>
+    h1 {
+      margin: 30px 0;
+      font-size: 4em;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+  </style>
+</head>
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<body>
+  <div class="container">
+    <h1>404</h1>
 
-<div class="container">
-  <h1>404</h1>
+    <p><strong>Page not found :(</strong></p>
+    <p>The requested page could not be found.</p>
+  </div>
+</body>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+</html>
